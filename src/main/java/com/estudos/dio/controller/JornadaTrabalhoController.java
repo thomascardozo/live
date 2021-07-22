@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/jornada")
@@ -38,14 +39,15 @@ public class JornadaTrabalhoController {
     }
 
     @DeleteMapping("/{idJornada}")
-    public ResponseEntity deleteByID(@PathVariable("idJornada") Long idJornada) throws Exception {
+    public Optional deleteByID(@PathVariable("idJornada") Long idJornada) throws Exception {
+        Optional<JornadaTrabalho> jornadaDeletada = null;
        try {
+           jornadaDeletada = jornadaService.getById(idJornada);
            jornadaService.deleteJornada(idJornada);
        }catch (Exception e){
            System.out.println(e.getMessage());
        }
-        return (ResponseEntity<JornadaTrabalho>) ResponseEntity.ok();
-
+        return jornadaDeletada;
     }
 
 

@@ -28,8 +28,6 @@ public class BancoHoras {
         private long idBancoHoras;
         private long idMovimentacao;
         private long idUsuario;
-
-
     }
     @EmbeddedId
     private BancoHorasId bancoHorasId;

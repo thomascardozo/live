@@ -4,6 +4,7 @@ import lombok.*;
 import org.hibernate.envers.Audited;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Getter
@@ -16,11 +17,12 @@ import javax.persistence.Id;
 @Audited
 public class Empresa {
     @Id
+    @GeneratedValue
     private Long id;
     private String descricao;
     private String cnpj;
     private String endereco;
-    private String bairo;
+    private String bairro;
     private String cidade;
     private String estado;
     private String telefone;
