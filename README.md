@@ -1,5 +1,11 @@
 # Bootcamp Santander Java | Angular - diolive
 
-Api rest para gerenciamento de ponto e controle de acesso.
+Projeto Api REST - CRUD gerenciamento de ponto e controle de acessos
 
-Java | Spring boot | Spring Data Jpa | Hibernate | Lombok | swagger
+Java | Springboot | Spring Data Jpa | Hibernate | Lombok | Swagger
+
+Incluídos os controllers e infraestrutura de CRUDs para as entidades Usuario e Empresa, em relação ao projeto inicial
+
+Projeto original: https://github.com/rodolfogomes/diolive
+
+Acessar Swagger ao rodar localmente no browser: http://localhost:8081/swagger-ui.html#/ 
